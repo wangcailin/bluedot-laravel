@@ -41,12 +41,12 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
-            "@php artisan vendor:publish --provider='Composer\\ServiceProvider'"
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
+            "@php artisan vendor:publish --provider='Composer\\ServiceProvider'"
         ]
     },
     "extra": {
