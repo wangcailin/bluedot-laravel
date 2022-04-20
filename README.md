@@ -13,6 +13,7 @@ composer create-project bluedot/laravel {项目文件夹}
 #### Initialization
 
 1. 更改.env
+2. 更改 deploy -> helm.yaml
 
 #### Start Server
 
