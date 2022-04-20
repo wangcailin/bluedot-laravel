@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Composer\ComposerServiceProvider::class,
 
         /*
          * Application Service Providers...
