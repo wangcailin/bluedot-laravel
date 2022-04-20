@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: { 域名 }
+      paths:
+        - backend:
+            serviceName: { 项目名 }
+            servicePort: 80
+          path: /{路径}
+  tls:
+    - secretName: { HTTPS证书 }
+      hosts:
+        - { 域名 }

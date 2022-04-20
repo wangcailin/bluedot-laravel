@@ -1,0 +1,2 @@
+* * * * * cd /var/www/html && /bin/su www-data -s /bin/bash -c "/usr/local/bin/php artisan schedule:run >> /dev/null 2>&1"
+* * * * * chmod -R 777 /var/www/html/storage
