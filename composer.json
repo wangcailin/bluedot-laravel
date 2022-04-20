@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "bluedot/composer": "2.0.10"
+        "bluedot/composer": "2.0.11"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -46,8 +46,8 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
-            "@php artisan vendor:publish --provider='Composer\\ServiceProvider'",
-            "@php artisan vendor:publish --tag=auth-publish --force"
+            "@php artisan vendor:publish --provider='Spatie\\Permission\\PermissionServiceProvider'",
+            "@php artisan vendor:publish --provider='Composer\\ServiceProvider'"
         ]
     },
     "extra": {
