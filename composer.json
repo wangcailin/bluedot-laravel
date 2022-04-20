@@ -47,7 +47,7 @@
             "@php artisan key:generate --ansi",
             "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
             "@php artisan vendor:publish --provider='Spatie\\Permission\\PermissionServiceProvider'",
-            "@php artisan vendor:publish --provider='Composer\\ServiceProvider'"
+            "@php artisan vendor:publish --provider='Composer\\ComposerServiceProvider'"
         ]
     },
     "extra": {
