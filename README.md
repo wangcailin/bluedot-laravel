@@ -15,7 +15,19 @@ composer create-project bluedot/laravel {项目文件夹}
 1. 更改.env
 2. 更改 deploy -> helm.yaml
 
-#### Start Server
+#### 初始化数据库
+
+```
+php artisan migrate
+```
+
+#### 初始化数据
+
+```
+php artisan db:seed
+```
+
+#### 本地开发
 
 ```
 php artisan serve
