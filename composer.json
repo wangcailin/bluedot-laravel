@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "bluedot/composer": "2.0.23"
+        "bluedot/composer": "2.0.26"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
