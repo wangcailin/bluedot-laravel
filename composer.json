@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "bluedot/composer": "2.0.29"
+        "bluedot/composer": "2.1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -47,6 +47,7 @@
             "@php artisan key:generate --ansi",
             "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
             "@php artisan vendor:publish --provider='Spatie\\Permission\\PermissionServiceProvider'",
+            "@php artisan passport:keys",
             "@php artisan composer:install"
         ]
     },
