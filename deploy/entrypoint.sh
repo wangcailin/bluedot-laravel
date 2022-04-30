@@ -6,6 +6,7 @@ rm /etc/nginx/sites-enabled/*
 cp deploy/nginx.conf /etc/nginx/conf.d/nginx.conf
 
 cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+sed -i 's/;opcache.enable=1/opcache.enable=1/g' /usr/local/etc/php/php.ini
 
 cd /var/www/html
 
