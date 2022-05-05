@@ -30,5 +30,5 @@ php artisan db:seed
 #### 本地开发
 
 ```
-php artisan serve
+php -S 0.0.0.0:8000 -t public
 ```
