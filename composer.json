@@ -47,7 +47,9 @@
             "@php artisan key:generate --ansi",
             "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
             "@php artisan vendor:publish --provider='Spatie\\Permission\\PermissionServiceProvider'",
+            "@php artisan vendor:publish --provider='Tymon\\JWTAuth\\Providers\\LaravelServiceProvider'",
             "@php artisan passport:keys",
+            "@php artisan jwt:secret",
             "@php artisan composer:install"
         ]
     },

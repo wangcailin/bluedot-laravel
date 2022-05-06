@@ -39,6 +39,10 @@ return [
             'driver' => 'passport',
             'provider' => 'auth_user',
         ],
+        'platform' => [
+            'driver' => 'jwt',
+            'provider' => 'platform_user',
+        ],
     ],
 
     /*
@@ -62,6 +66,10 @@ return [
         'auth_user' => [
             'driver' => 'eloquent',
             'model' => \Composer\Support\Auth\Models\User::class,
+        ],
+        'platform_user' => [
+            'driver' => 'eloquent',
+            'model' => \Composer\Application\WeChat\Models\WeChatOpenid::class,
         ],
     ],
 
