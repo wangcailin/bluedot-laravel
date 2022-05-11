@@ -14,6 +14,7 @@ composer create-project bluedot/laravel {项目文件夹}
 
 1. 更改.env
 2. 更改 deploy -> helm.yaml
+3. 上线后需把.env 自动生成的配置信息同步到.env.production，管理方式自行安排
 
 #### 初始化数据库
 
