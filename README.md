@@ -32,3 +32,8 @@ php artisan db:seed
 ```
 php -S 0.0.0.0:8000 -t public
 ```
+
+#### 功能说明
+
+-   微信功能配置 => [EasyWeChat](https://easywechat.com/5.x/)
+-   权限配置 => [Laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction)
