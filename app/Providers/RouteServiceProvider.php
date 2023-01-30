@@ -2,8 +2,12 @@
 
 namespace App\Providers;
 
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
 use Composer\Composer;
 
 class RouteServiceProvider extends ServiceProvider
@@ -11,36 +15,31 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * The path to the "home" route for your application.
      *
-     * This is used by Laravel authentication to redirect users after login.
+     * Typically, users are redirected here after authentication.
      *
      * @var string
      */
     public const HOME = '/home';
 
-    /**
-     * The controller namespace for the application.
-     *
-     * When present, controller route declarations will automatically be prefixed with this namespace.
-     *
-     * @var string|null
-     */
     protected $namespace = 'App\\Http\\Controllers';
 
     protected $prefix = 'api';
 
     /**
-     * Define your route model bindings, pattern filters, etc.
+     * Define your route model bindings, pattern filters, and other route configuration.
      *
      * @return void
      */
     public function boot()
     {
-        if (config('app.env') !== 'production') {
+        // $this->configureRateLimiting();
+        if (App::environment('dev')) {
             $this->prefix = 'api-dev';
         }
+
         $this->routes(function () {
-            Route::prefix($this->prefix)
-                ->middleware('api')
+            Route::middleware('api')
+                ->prefix($this->prefix)
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
         });
@@ -48,5 +47,17 @@ class RouteServiceProvider extends ServiceProvider
         Composer::routes([], [
             'prefix' => $this->prefix,
         ]);
+    }
+
+    /**
+     * Configure the rate limiters for the application.
+     *
+     * @return void
+     */
+    protected function configureRateLimiting()
+    {
+        RateLimiter::for('api', function (Request $request) {
+            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+        });
     }
 }
