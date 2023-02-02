@@ -41,7 +41,7 @@ return [
             'provider' => 'auth_user',
         ],
         'platform' => [
-            'driver' => 'jwt',
+            'driver' => 'session',
             'provider' => 'platform_user',
         ],
     ],
