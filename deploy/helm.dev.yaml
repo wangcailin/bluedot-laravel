@@ -10,6 +10,6 @@ ingress:
             servicePort: 80
           path: /{路径}-dev
   tls:
-    - secretName: { HTTPS证书 }
+    - secretName: blue-dot.com.cn
       hosts:
-        - { 域名 }
+        - blue-dot.com.cn
