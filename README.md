@@ -50,6 +50,16 @@ php artisan migrate
 php artisan db:seed
 ```
 
+#### 开始开发
+
+**开发规范（必读）**
+
+-   所有应用都放到 app/Application 文件夹下
+-   Http Controller Backend 为后台 CMS API
+-   Http Controller Platform 为前台 API
+-   原则上 Http 不承载核心业务逻辑，只做业务分发，在某些后台 CMS API 和前台 API 业务逻辑不一致的情况下在 Http 做重载处理
+-   原则上遵循 **Restful API**(http://www.ruanyifeng.com/blog/2014/05/restful_api.html) 规范
+
 ## Package Support
 
 -   **[Laravel](https://learnku.com/docs/laravel/9.x)**
