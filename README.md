@@ -32,6 +32,7 @@ composer create-project bluedot/laravel your-project-name
 
 -   数据库连接
 -   缓存
+-   APP_URL
 -   ...
 
 #### 3. 初始化数据
