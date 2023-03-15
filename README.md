@@ -51,7 +51,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-#### 开始开发
+#### 4. 开始开发
 
 **开发规范（必读）**
 
@@ -67,7 +67,7 @@ php artisan db:seed
 php -S 0.0.0.0:8000 -t public
 ```
 
-注：使用 **php -S 0.0.0.0:8000 -t public**启动会有读取不到 config()配置问题
+注：使用 **php artisan serve**启动会有读取不到 config()配置问题
 
 ## Package Support
 
