@@ -14,6 +14,7 @@
 -   多管理员
 -   多权限
 -   微信 SDK
+-   ...
 
 详细请查阅 [bluedot-composer](https://gitee.com/blue-dot-cn_cailin__wang/bluedot-composer.git) .
 
@@ -31,6 +32,7 @@ composer create-project bluedot/laravel your-project-name
 
 -   数据库连接
 -   缓存
+-   ...
 
 #### 3. 初始化数据
 
