@@ -61,6 +61,14 @@ php artisan db:seed
 -   原则上 Http 不承载核心业务逻辑，只做业务分发，在某些后台 CMS API 和前台 API 业务逻辑不一致的情况下在 Http 做重载处理
 -   原则上遵循 **Restful API**(http://www.ruanyifeng.com/blog/2014/05/restful_api.html) 规范
 
+**启动项目**
+
+```shell
+php -S 0.0.0.0:8000 -t public
+```
+
+注：使用 **php -S 0.0.0.0:8000 -t public**启动会有读取不到 config()配置问题
+
 ## Package Support
 
 -   **[Laravel](https://learnku.com/docs/laravel/9.x)**
