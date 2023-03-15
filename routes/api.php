@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:platform')->get('/user', function (Request $request) {
+    return auth('platform')->user();
 });
-
 
 Route::group(['prefix' => 'backend', 'namespace' => 'Backend'], function () {
     Route::group(['middleware' => 'auth:backend'], function () {
