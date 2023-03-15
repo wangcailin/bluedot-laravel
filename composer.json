@@ -9,7 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-        "bluedot/composer": "3.2.0"
+        "bluedot/composer": "3.2.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -45,7 +45,8 @@
             "@php artisan vendor:publish --provider='Overtrue\\LaravelWeChat\\ServiceProvider'",
             "@php artisan vendor:publish --provider='Spatie\\Permission\\PermissionServiceProvider'",
             "@php artisan passport:keys",
-            "@php artisan composer:install"
+            "@php artisan composer:install",
+            "@php artisan composer:env"
         ]
     },
     "extra": {
