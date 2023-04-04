@@ -1,5 +1,8 @@
 <?php
 
+namespace Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Laravel\Passport\ClientRepository;
 use Composer\Support\Auth\Models\User;
@@ -8,10 +11,8 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         User::createAdminUser('bluedot', 'Bluedot@2023');
 
