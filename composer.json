@@ -41,6 +41,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
+            "git init",
             "cp .git/hooks/pre-commit.sample .git/hooks/pre-commit",
             "echo '\\n# PHP-CS-Fixer\\nFILES=\\$(git diff --cached --name-only --diff-filter=ACM \"*.php\" | tr '\\n' ' ')\\n[ -z \"$FILES\" ] && exit 0\\n\\n# 自定义 PHP-CS-Fixer 的安装路径，如果已经将其添加到 PATH，则无需修改\\nPHP_CS_FIXER=\"vendor/bin/php-cs-fixer\"\\n\\n# 对暂存文件执行 PHP-CS-Fixer\\n$PHP_CS_FIXER fix --config=.php_cs --quiet $FILES\\n\\n# 将修改后的文件重新暂存\\ngit add $FILES\\n\\nexit 0\\n' >> .git/hooks/pre-commit",
             "chmod +x .git/hooks/pre-commit",
