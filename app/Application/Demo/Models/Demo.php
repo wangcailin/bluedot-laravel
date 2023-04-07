@@ -8,7 +8,9 @@ class Demo extends Model
 {
     protected $table = 'demo';
 
-    protected $fillable = [];
+    protected $fillable = [
+        'title'
+    ];
 
     protected $casts = [];
 }
