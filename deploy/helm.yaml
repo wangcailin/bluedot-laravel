@@ -1,9 +1,9 @@
 ingress:
   enabled: true
   hosts:
-    - host: { 域名 }
+    - host: xxx.blue-dot.com.cn
       paths:
-        - path: /{路径}
+        - path: /api
           pathType: ImplementationSpecific
   tls:
     - secretName: blue-dot.com.cn
