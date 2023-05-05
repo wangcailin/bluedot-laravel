@@ -14,6 +14,8 @@ return new class() extends Migration
         Schema::create('demo', function (Blueprint $table) {
             $table->id();
             $table->string('title', 128);
+            $table->string('img_1')->nullable();
+            $table->json('img_2')->nullable();
             $table->timestamps();
         });
     }

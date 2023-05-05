@@ -9,8 +9,12 @@ class Demo extends Model
     protected $table = 'demo';
 
     protected $fillable = [
-        'title'
+        'title',
+        'img_1',
+        'img_2',
     ];
 
-    protected $casts = [];
+    protected $casts = [
+        'img_2' => 'array',
+    ];
 }
