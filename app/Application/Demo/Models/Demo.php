@@ -12,9 +12,13 @@ class Demo extends Model
         'title',
         'img_1',
         'img_2',
+        'file_1',
+        'file_2',
     ];
 
     protected $casts = [
         'img_2' => 'array',
+        'file_1' => 'json',
+        'file_2' => 'array',
     ];
 }

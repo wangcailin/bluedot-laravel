@@ -53,11 +53,11 @@
         },
         {
             "name": "bluedot/composer",
-            "version": "3.4.0",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://gitee.com/blue-dot-cn_cailin__wang/bluedot-composer.git",
-                "reference": "e506d3984d91655e44c53202e06d58216ea68d19"
+                "reference": "1d1f10bdb06bafb5da18ce4489b07248afccd55c"
             },
             "require": {
                 "aliyuncs/oss-sdk-php": "^2.6",
@@ -102,7 +102,7 @@
                     "email": "cailin.wang@blue-dot.cn"
                 }
             ],
-            "time": "2023-04-04T09:10:13+00:00"
+            "time": "2023-05-05T10:36:39+00:00"
         },
         {
             "name": "bluedot/lookstar-client",
@@ -10907,5 +10907,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

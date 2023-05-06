@@ -16,6 +16,8 @@ return new class() extends Migration
             $table->string('title', 128);
             $table->string('img_1')->nullable();
             $table->json('img_2')->nullable();
+            $table->string('file_1')->nullable();
+            $table->json('file_2')->nullable();
             $table->timestamps();
         });
     }
