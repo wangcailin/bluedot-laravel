@@ -22,6 +22,10 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend'], function () {
     Route::group(['middleware' => 'auth:backend'], function () {
 
         Route::group(['prefix' => 'demo', 'namespace' => 'Demo'], function () {
+            Route::group(['prefix' => 'form'], function () {
+                Route::get('{id}', 'Controller@get'); // 获取单个数据
+                Route::put('{id}', 'Controller@update'); // 更新数据
+            });
             Route::get('', 'Controller@getList'); // 获取列表
             Route::post('', 'Controller@create'); // 创建数据
             Route::get('{id}', 'Controller@get'); // 获取单个数据

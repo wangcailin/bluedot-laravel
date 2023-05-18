@@ -20,6 +20,12 @@ return new class() extends Migration
             $table->json('file_2')->nullable();
             $table->timestamps();
         });
+
+        Schema::create('demo_form', function (Blueprint $table) {
+            $table->id();
+            $table->json('data')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**

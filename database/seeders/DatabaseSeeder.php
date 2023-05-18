@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Laravel\Passport\ClientRepository;
 use Composer\Support\Auth\Models\User;
+use App\Application\Demo\Models\Form;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Form::create([]);
         User::createAdminUser('bluedot', 'Bluedot@2023');
 
         $client = new ClientRepository();
