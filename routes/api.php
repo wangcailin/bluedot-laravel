@@ -32,6 +32,15 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend'], function () {
             Route::put('{id}', 'Controller@update'); // 更新数据
             Route::delete('{id}', 'Controller@delete'); // 删除数据
         });
+        
+        Route::group(['prefix' => 'demo-dragger', 'namespace' => 'DemoDragger'], function () {
+            Route::get('', 'Controller@getList'); // 获取列表
+            Route::post('updateRules', 'Controller@updateRules'); // 更新列表排序
+            Route::post('', 'Controller@create'); // 创建数据
+            Route::get('{id}', 'Controller@get'); // 获取单个数据
+            Route::put('{id}', 'Controller@update'); // 更新数据
+            Route::delete('{id}', 'Controller@delete'); // 删除数据
+        });
     });
 });
 
