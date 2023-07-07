@@ -26,6 +26,14 @@ return new class() extends Migration
             $table->json('data')->nullable();
             $table->timestamps();
         });
+
+        Schema::create('demo_dragger', function (Blueprint $table) {
+            $table->id();
+            $table->string('title', 128);
+            $table->integer('sort');
+            $table->text('detail');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -34,5 +42,6 @@ return new class() extends Migration
     public function down(): void
     {
         Schema::dropIfExists('demo');
+        Schema::dropIfExists('demo_dragger');
     }
 };
