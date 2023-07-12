@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "773f2bd217504e4a2eec942810653ed9",
+    "content-hash": "5cf92c20c08d9ed1423dd3c3d368e916",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -53,11 +53,11 @@
         },
         {
             "name": "bluedot/composer",
-            "version": "3.4.6",
+            "version": "3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://gitee.com/blue-dot-cn_cailin__wang/bluedot-composer.git",
-                "reference": "785bab4207eef2e467d02f0e2584f3e84e337bc1"
+                "reference": "4f2e4efc73142fc4bc9df52daacbd47175bb971b"
             },
             "require": {
                 "aliyuncs/oss-sdk-php": "^2.6",
@@ -102,7 +102,7 @@
                     "email": "cailin.wang@blue-dot.cn"
                 }
             ],
-            "time": "2023-07-07T08:55:28+00:00"
+            "time": "2023-07-08T15:00:13+00:00"
         },
         {
             "name": "bluedot/lookstar-client",
