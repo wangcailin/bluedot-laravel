@@ -8,6 +8,6 @@ COPY .env.production /var/www/html/.env
 
 RUN chmod +x /usr/local/bin/entrypoint
 
-EXPOSE 80 9000
+EXPOSE 80
 
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
