@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
-use Composer\Composer;
+use BluedotComposer\Composer;
 
 class RouteServiceProvider extends ServiceProvider
 {

@@ -3,7 +3,7 @@
 namespace App\Application\DemoDragger;
 
 use App\Application\DemoDragger\Models\DemoDragger;
-use Composer\Http\Controller;
+use BluedotComposer\Http\Controller;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Validation\Rule;
 use Spatie\QueryBuilder\AllowedFilter;
@@ -18,8 +18,7 @@ class Client extends Controller
         ];
         $this->defaultSorts = "-sort";
         $this->allowedSorts = ['sort'];
-        $this->validateRules = [
-        ];
+        $this->validateRules = [];
     }
 
     public function updateRules()
@@ -31,6 +30,6 @@ class Client extends Controller
             $filteredArr = array_diff_key($arr, array_flip(['created_at', 'updated_at']));
             $this->model::where('id', $arr['id'] ?? '')->update($filteredArr);
         }
-        return $this->success([]); 
+        return $this->success([]);
     }
 }

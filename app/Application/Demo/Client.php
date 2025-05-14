@@ -2,7 +2,7 @@
 
 namespace App\Application\Demo;
 
-use Composer\Http\Controller;
+use BluedotComposer\Http\Controller;
 use App\Application\Demo\Models\Demo;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Validation\Rule;

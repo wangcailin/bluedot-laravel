@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Laravel\Passport\ClientRepository;
-use Composer\Support\Auth\Models\User;
+use BluedotComposer\Support\Auth\Models\User;
 use App\Application\Demo\Models\Form;
 
 class DatabaseSeeder extends Seeder
