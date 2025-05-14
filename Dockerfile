@@ -1,4 +1,4 @@
-FROM registry.cn-beijing.aliyuncs.com/bluedot-base/php:8.1
+FROM registry.cn-beijing.aliyuncs.com/bluedot-base/php:8.4.7-fpm
 
 WORKDIR /var/www/html
 
