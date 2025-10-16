@@ -66,11 +66,11 @@ return [
     'providers' => [
         'auth_user' => [
             'driver' => 'eloquent',
-            'model' => \Composer\Support\Auth\Models\User::class,
+            'model' => \BluedotComposer\Support\Auth\Models\User::class,
         ],
         'platform_user' => [
             'driver' => 'eloquent',
-            'model' => \Composer\Application\WeChat\Models\WeChatOpenid::class,
+            'model' => \BluedotComposer\Application\WeChat\Models\WeChatOpenid::class,
         ],
     ],
 
